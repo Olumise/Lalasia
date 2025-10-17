@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Articles = () => {
+const Products = () => {
   return (
     <div className='max-w-[1400px] mx-auto px-8 py-2 flex flex-col gap-6'>
-        Articles</div>
+        Products
+        </div>
   )
 }
 
-export default Articles
+export default Products

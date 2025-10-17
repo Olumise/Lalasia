@@ -8,6 +8,7 @@ import Homepage from "./components/pages/Homepage"
 import About from './components/pages/About';
 import Articles from './components/pages/Articles';
 import Services from './components/pages/Services';
+import Products from './components/pages/Products';
 
 
 
@@ -23,6 +24,8 @@ function App() {
       { path:'about', element: <About/>  },
       { path:'articles', element: <Articles/>  },
       { path:'services', element: <Services/>  },
+      { path:'products', element: <Products/>  },
+
     ]
   },
 ]);

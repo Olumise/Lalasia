@@ -8,10 +8,10 @@ const Articles = () => {
 				<div className="flex-1 flex flex-col gap-5 ">
 					<div className="flex flex-col gap-3 items-start">
 						<span className="text-lg text-secondary-100 text-start">
-							Testimonials
+							Articles
 						</span>
 						<h2 className="text-4xl font-semibold text-start ">
-							What our customer say
+							The best furniture comes from Lalasia
 						</h2>
 						<p className="flex-1 text-base text-paragraph-100 text-start">
 							Pellentesque etiam blandit in tincidunt at donec. Eget ipsum

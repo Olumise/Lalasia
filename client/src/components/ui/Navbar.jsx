@@ -8,47 +8,50 @@ const Navbar = () => {
 		"text-neutral-900 hover:text-teal-600 hover:underline hover:underline-offset-30 transition";
 	return (
 		<header className="bg-white border-b border-neutral-200">
-			<div className="max-w-7xl mx-auto px-6 py-4">
+			<div className="max-w-[1400px] mx-auto px-8 py-4">
 				<div className="flex items-center justify-between">
-					<div className="flex items-center gap-2">
-						<img
-							src={Logo}
-							alt=""
-						/>
-						<span className="text-xl font-semibold text-neutral-900">
-							Lalasia
-						</span>
-					</div>
+					<NavLink
+						to="/"
+						end>
+						<div className="flex items-center gap-2">
+							<img
+								src={Logo}
+								alt="Lalasia Logo"
+							/>
+							<span className="text-xl font-semibold text-neutral-900">
+								Lalasia
+							</span>
+						</div>
+					</NavLink>
 
 					<nav className="flex items-center gap-8">
 						<NavLink
-                            className={`${menuStyle}`}
-							to="/"
+							className={`${menuStyle}`}
+							to="/products"
 							end>
 							Product
 						</NavLink>
 
-                        <NavLink
-                            className={`${menuStyle}`}
+						<NavLink
+							className={`${menuStyle}`}
 							to="/services"
 							end>
 							Services
 						</NavLink>
 
-                        <NavLink
-                            className={`${menuStyle}`}
+						<NavLink
+							className={`${menuStyle}`}
 							to="/articles"
 							end>
 							Articles
 						</NavLink>
 
-                        <NavLink
-                            className={`${menuStyle}`}
+						<NavLink
+							className={`${menuStyle}`}
 							to="/about"
 							end>
 							About Us
 						</NavLink>
-						
 					</nav>
 
 					<div className="flex items-center gap-4">

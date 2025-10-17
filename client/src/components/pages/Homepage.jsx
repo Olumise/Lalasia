@@ -9,7 +9,7 @@ import Cta from '../ui/Cta'
 
 const Homepage = () => {
   return (
-    <div className='max-w-[1400px] mx-auto px-8 py-2 flex flex-col gap-6ff'>
+    <div className='max-w-[1400px] mx-auto px-8 py-2 flex flex-col gap-6'>
         <Hero/>
         <Benefits/>
         <Products/>
