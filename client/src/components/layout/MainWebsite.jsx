@@ -1,10 +1,12 @@
 import React from 'react'
-import Homepage from '../pages/Homepage'
+import { Outlet } from "react-router";
+import Navbar from '../ui/Navbar';
 
 const MainWebsite = () => {
   return (
     <div className=' bg-screen-100 w-full'>
-        <Homepage/>
+        <Navbar/>
+        <Outlet/>
     </div>
   )
 }
