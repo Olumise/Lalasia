@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import { products } from "../../constants/Products";
 import ProductCard from "../ui/ProductCard";
 import { ChevronRightIcon } from "../icons";
 
-function Products() {
+
+
+function Products({productsList}) {
+	
 	return (
 		<div className="flex flex-col gap-6 p-4">
 			<div className="flex flex-col gap-4 items-center w-1/2 mx-auto">
@@ -38,7 +40,7 @@ function Products() {
 						prevEl: ".pslider-prev",
 					}}
 					modules={[Navigation, Autoplay]}>
-					{products.map((product) => {
+					{productsList.map((product) => {
 						return (
 							<SwiperSlide
 								key={product.id}

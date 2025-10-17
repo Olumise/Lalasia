@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from '../About/Hero'
-import Mission from '../About/Mission'
-import Team from '../About/Team'
+import Hero from '../about/Hero'
+import Mission from '../about/Mission'
+import Team from '../about/Team'
 
 const About = () => {
   return (
