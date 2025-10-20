@@ -1,5 +1,5 @@
 import React from 'react'
-import services from '../../constants/Services';
+import services from '../../utils/Services';
 
 const ServicesList = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import blogPosts from "../../constants/BlogPosts";
+import blogPosts from "../../utils/BlogPosts";
 
 const Articles = () => {
 	return (
@@ -20,42 +20,41 @@ const Articles = () => {
 					</div>
 					<div className="h-full">
 						<div className="h-full">
-                            {
-                            blogPosts.slice(0,1).map((blog) =>{
-							return <ArticleCardOne 
-                            key={blog.id}
-                            Title={blog.title}
-                                Subtext={blog.description}
-                                Category={blog.category}
-                                Image={blog.image}
-                                AuthorName={blog.author}
-                                AuthorImage={blog.authorImage}
-                                Date={blog.date}/>
-                                })
-                            }
+							{blogPosts.slice(0, 1).map((blog) => {
+								return (
+									<ArticleCardOne
+										key={blog.id}
+										Title={blog.title}
+										Subtext={blog.description}
+										Category={blog.category}
+										Image={blog.image}
+										AuthorName={blog.author}
+										AuthorImage={blog.authorImage}
+										Date={blog.date}
+									/>
+								);
+							})}
 						</div>
 					</div>
 				</div>
 				<div className="w-1/2 flex flex-col gap-4">
-                    <div className="w-full h-full flex flex-col justify-between">
-                        {
-                            blogPosts.slice(1,4).map((blog) =>{
-                                return <ArticleCardTwo
-                                key={blog.id}
-                                Title={blog.title}
-                                Subtext={blog.description}
-                                Category={blog.category}
-                                Image={blog.image}
-                                AuthorName={blog.author}
-                                AuthorImage={blog.authorImage}
-                                Date={blog.date}
-                                />
-                            })
-                        }
-                    
-
-                    </div>
-                </div>
+					<div className="w-full h-full flex flex-col justify-between">
+						{blogPosts.slice(1, 4).map((blog) => {
+							return (
+								<ArticleCardTwo
+									key={blog.id}
+									Title={blog.title}
+									Subtext={blog.description}
+									Category={blog.category}
+									Image={blog.image}
+									AuthorName={blog.author}
+									AuthorImage={blog.authorImage}
+									Date={blog.date}
+								/>
+							);
+						})}
+					</div>
+				</div>
 			</div>
 		</div>
 	);
@@ -66,9 +65,9 @@ const ArticleCardOne = ({
 	Subtext = "Decorating with neutrals brings balance to the dining room. With eclectic decoration on the sides, Caruso Dining Table and Cyrillo Dining Chairs elevate the tonal base of the room. The modern furniture set gives personality to any space in all types of architecture.The wide volume enables everyone to sit back and relax, be it in the dining room, conference, or office.",
 	Category = "Tips and Trick",
 	Image = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGVjb3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900",
-    AuthorName='Jerremy Jean',
-    AuthorImage ='https://i.pravatar.cc/150?img=45',
-    Date='Friday, 1 April 2022'
+	AuthorName = "Jerremy Jean",
+	AuthorImage = "https://i.pravatar.cc/150?img=45",
+	Date = "Friday, 1 April 2022",
 }) => {
 	return (
 		<div className="relative flex gap-4 py-4 h-full items-end">
@@ -98,13 +97,14 @@ const ArticleCardTwo = ({
 	Subtext = "Decorating with neutrals brings balance to the dining room. With eclectic decoration on the sides, Caruso Dining Table and Cyrillo Dining Chairs elevate the tonal base of the room. The modern furniture set gives personality to any space in all types of architecture.The wide volume enables everyone to sit back and relax, be it in the dining room, conference, or office.",
 	Category = "Tips and Trick",
 	Image = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGVjb3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900",
-    AuthorName='Jerremy Jean',
-    AuthorImage ='https://i.pravatar.cc/150?img=45',
-    Date='Friday, 1 April 2022'
+	AuthorName = "Jerremy Jean",
+	AuthorImage = "https://i.pravatar.cc/150?img=45",
+	Date = "Friday, 1 April 2022",
 }) => {
 	return (
 		<div className="flex gap-4 w-full items-center p-4 rounded-2xl hover:bg-screen-200 transition cursor-pointer">
-			<img className="w-50 h-50 "
+			<img
+				className="w-50 h-50 "
 				src={Image}
 				alt={Title}
 			/>
@@ -118,13 +118,14 @@ const ArticleCardTwo = ({
 				</div>
 				<div className="flex justify-between gap-4 w-full">
 					<div className="flex gap-2 items-center">
-						<img className="w-5 h-5 rounded-full object-cover"
+						<img
+							className="w-5 h-5 rounded-full object-cover"
 							src={AuthorImage}
 							alt={AuthorName}
 						/>
 						<span className="text-xs font-bold">By {AuthorName}</span>
 					</div>
-                    <span className="text-xs text-paragraph-100">{Date}</span>
+					<span className="text-xs text-paragraph-100">{Date}</span>
 				</div>
 			</div>
 		</div>

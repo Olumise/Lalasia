@@ -1,5 +1,5 @@
 import React from 'react'
-import teamMembers from '../../constants/TeamMembers';
+import teamMembers from '../../utils/TeamMembers';
 
 const Team = () => {
   return (

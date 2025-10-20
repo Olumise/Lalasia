@@ -202,4 +202,45 @@ console.log(err.message)
 }
 })
 
+productRouter.get('/categories',(req,res)=>{
+  try{
+      const categories = products.map((item)=> {
+        return item.category
+      } )
+      const uniqueSet = new Set(categories)
+      const updatedCategories = [...uniqueSet]
+
+      const priceRange = [
+        {
+          text:"Less than $20",
+          value:'0-19'
+        },
+        {
+          text:"$20 - $60",
+          value:'20-60'
+        },
+        {
+          text:"$60 - $200",
+          value:'60-200'
+        },
+      ]
+
+      const filters = {
+        category:{
+          
+          list: updatedCategories,
+          length: updatedCategories.length,
+        },
+        price:{
+          
+          list: priceRange,
+          length: priceRange.length,
+        },
+      }
+      res.send(filters) 
+  }catch(err){
+    res.status(400).send(err.message)
+  }
+})
+
 module.exports = {productRouter}
