@@ -5,6 +5,7 @@ const Button =({
   Children = "Button",
   Variant = 'primary',
   Icon,
+  onClick
 
 }) =>{
 
@@ -17,7 +18,7 @@ const Button =({
  }
 
   return (
-    <button className={`group flex justify-center items-center gap-2 py-3 px-6 min-w-[150px] h-fit ${Variants[Variant]} cursor-pointer transition`}>
+    <button className={`group flex justify-center items-center gap-2 py-3 px-6 min-w-[150px] h-fit ${Variants[Variant]} cursor-pointer transition`} onClick={onClick}>
       {Children} {Icon ? <Icon size={'18'}/> : null } 
       </button>
   )

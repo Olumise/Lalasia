@@ -26,7 +26,7 @@ const SelectDropdown = ({
 }) => {
 	return (
 		
-			<Select value={value} onValueChange={setValue}>
+			<Select value={value || ''} onValueChange={setValue}>
 				<SelectTrigger className="w-full py-5 px-4 rounded-xs text-sm">
 					<SelectValue
 						placeholder={placeholder}
