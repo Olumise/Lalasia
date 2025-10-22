@@ -11,6 +11,8 @@ import Articles from "./components/pages/Articles";
 import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
 import ComponentPreview from "./components/ui/ComponentPreview";
+import ProductDetails from "./components/pages/ProductDetails";
+import Cart from "./components/pages/Cart";
 
 const router = createBrowserRouter([
 	{
@@ -26,7 +28,11 @@ const router = createBrowserRouter([
 			{ path: "articles", element: <Articles /> },
 			{ path: "services", element: <Services /> },
 			{ path: "products", element: <Products /> },
+			{ path: "products", element: <Products /> },
+			{ path: "product/:product", element: <ProductDetails/> },
 			{ path: "component-preview", element: <ComponentPreview /> },
+			{ path: "cart", element: <Cart /> },
+
 
 		],
 	},

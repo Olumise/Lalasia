@@ -1,11 +1,13 @@
 import React, { Children } from 'react'
 import { Eye } from 'lucide-react';
+import { twMerge } from 'tailwind-merge'
 
 const Button =({
   Children = "Button",
   Variant = 'primary',
   Icon,
-  onClick
+  onClick,
+  className
 
 }) =>{
 
@@ -18,7 +20,7 @@ const Button =({
  }
 
   return (
-    <button className={`group flex justify-center items-center gap-2 py-3 px-6 min-w-[150px] h-fit ${Variants[Variant]} cursor-pointer transition`} onClick={onClick}>
+    <button className={twMerge('group flex justify-center items-center gap-2 py-3 px-6 min-w-[150px] h-fit cursor-pointer transition', Variants[Variant], className )} onClick={onClick}>
       {Children} {Icon ? <Icon size={'18'}/> : null } 
       </button>
   )

@@ -1,6 +1,7 @@
 import { Eye, ArrowBigDown } from 'lucide-react';
 import Button from './Button';
 import { useState } from 'react';
+import { Link } from "react-router";
 
 
 const ProductCard = ({
@@ -8,7 +9,8 @@ const ProductCard = ({
     Category ='Living Room',
     Image ='https://picsum.photos/id/237/200/300',
     Description='Combination of wood and wool',
-    Price = '89.50'
+    Price = '89.50',
+    slug
 }) =>{
 
     const [isHovered, setIsHovered] = useState(false)
@@ -19,16 +21,21 @@ const ProductCard = ({
 
                 {isHovered ? 
                 <div className=" absolute h-full flex justify-center items-center p-4 w-full bg-[#0000006A]">
+                     <a href={`/product/${slug}`}>
                     <Button Variant='primary' Children = 'View Details' Icon={Eye}/>
+                     </a>
+                    
+                    
+                    
                 </div>
                 : null}
                 
                 <img className='w-full h-70 object-cover' src={Image} alt={Name} />
             </div>
-            <div>
+            <div className='w-full'>
                 <span className='text-paragraph-100 text-sm'>{Category}</span>
                 <h3 className='text-lg font-semibold'>{Name}</h3>
-                <span className='text-sm text-title-300'>{Description}</span>
+                <span className='text-sm text-title-30 line-clamp-2'>{Description}</span>
             </div>
             <h4 className='text-lg font-semibold'>${Price}</h4>
         </div>

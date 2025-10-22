@@ -102,6 +102,7 @@ const ProductsList = ({ productsList }) => {
 									Image={product.image_url}
 									Description={product.description}
 									Price={product.price}
+                  slug={product.slug}
 								/>
 							</div>
 						);

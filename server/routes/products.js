@@ -9,6 +9,8 @@ try{
   const priceRange = req.query.price
   const featured = req.query.featured
   const inStock = req.query.in_stock
+  const numberOfProducts = req.query.list
+  const currentProduct = req.query.current_product
 
   let filtered = products
 
@@ -43,6 +45,11 @@ try{
       return product.price >= min && product.price <= max
 
     })
+  }
+  if(numberOfProducts){
+    
+    filtered = currentProduct ? filtered.filter((item)=>item.slug !== currentProduct).slice(0,numberOfProducts)
+     : filtered.slice(0,numberOfProducts)
   }
 
     res.send(filtered)
@@ -94,4 +101,14 @@ productRouter.get('/categories',(req,res)=>{
   }
 })
 
+productRouter.get('/product/:product', (req,res)=>{
+  try{
+    const slug = req.params.product
+    const selectedProduct = products.find((item)=>item.slug === slug)
+    res.send(selectedProduct)
+
+  }catch(err){
+    res.status(400).send(err.message)
+  }
+})
 module.exports = {productRouter}
