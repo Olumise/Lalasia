@@ -26,7 +26,7 @@ const Hero = () => {
                 <SearchIcon size={'32'}/>
                 <input className='px-2 py-3 w-full border-b border-b-[transparent] text-lg text-title-100 focus:outline-0 focus:border-b focus:border-b-paragraph-100 transition' type="text" placeholder='Search Property' />
                 </div>
-                <Button Children='Search'/>
+                <Button children='Search'/>
             </div>
         </div>
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import Button from './Button';
 
-const CartSummary = ({ subtotal,onCheckout }) => {
+const CartSummary = ({ subtotal,onCheckout,disableBtn }) => {
   const fee = subtotal * 0.15
   const total = subtotal + fee ;
 
   return (
-    <div className="rounded-lg bg-card p-6 border">
+    <div className="rounded-lg bg-card p-6 border w-full">
       <h2 className="text-lg font-semibold mb-4">Order Summary</h2>
       
       <div className="space-y-3 mb-6">
@@ -27,7 +27,10 @@ const CartSummary = ({ subtotal,onCheckout }) => {
         </div>
       </div>
 
-      <Button className={'w-full'} Children='Proceed to Checkout' onClick={onCheckout}/>
+    <a href="/checkout">
+      <Button className={'w-full'} children='Proceed to Checkout'disabled={disableBtn}/>
+
+    </a>
 
       <p className="mt-4 text-xs text-center text-muted-foreground">
         Fees are collected to process your order.

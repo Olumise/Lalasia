@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 import { Outlet, useNavigation } from "react-router";
-import Navbar from '../ui/Navbar';
-
-
+import Navbar from "../ui/Navbar";
+import { Toaster } from "@/components/ui/sonner"
 
 const MainWebsite = () => {
+	return (
+		<div className=" bg-screen-100 w-full">
+      <Toaster position="top-center" />
+			<Navbar />
+			<Outlet />
+       
+		</div>
+	);
+};
 
-
-  return (
-    <div className=' bg-screen-100 w-full'>
-        <Navbar/>
-
-        <Outlet/>
-    </div>
-  )
-}
-
-export default MainWebsite
+export default MainWebsite;

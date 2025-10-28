@@ -5,6 +5,8 @@ import Stepper from "../ui/stepper";
 import PillButton from "../ui/PillButton";
 import {useSelector, useDispatch} from 'react-redux'
 import { updateCart } from "../../redux/cartItems";
+import { toast } from "sonner"
+
 
 const ProductItem = ({ product }) => {
 	const { name, image_url, description, subtext, price, variations } = product;
@@ -22,7 +24,7 @@ const ProductItem = ({ product }) => {
 		cartItems.push(newCartItem);
 		localStorage.setItem("cart-items", JSON.stringify(cartItems));
     dispatch(updateCart(cartItems))
-		alert("Added to cart successfully!");
+	toast.success("Added to cart successfully!");
 	}
 
 	return (
@@ -107,12 +109,12 @@ const ProductItem = ({ product }) => {
 					<div className="flex gap-4">
 						<Button
 							className={"w-full"}
-							Children="Buy Now"
+							children="Buy Now"
 						/>
 						<Button
 							Variant="white"
 							className={"w-full"}
-							Children="Add to Cart"
+							children="Add to Cart"
 							onClick={() => addToCart()}
 						/>
 					</div>

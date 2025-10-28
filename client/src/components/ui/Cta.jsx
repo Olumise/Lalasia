@@ -9,7 +9,7 @@ const Cta = ({
   return (
     <div className='p-4 flex flex-row gap-2 items-center justify-between'>
         <h3 className=" flex-1 text-2xl text-black font-semibold">{Title}</h3>
-        <Button Children={ButtonText} Icon={ArrowRight}/>
+        <Button children={ButtonText} Icon={ArrowRight}/>
     </div>
   )
 }

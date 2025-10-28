@@ -140,11 +140,11 @@ const ProductFilter = () => {
 				<div className="flex gap-2 justify-end">
 					<Button
 						Variant="white"
-						Children="Reset Filters"
+						children="Reset Filters"
 						onClick={() => resetFilters()}
 					/>
 					<Button
-						Children="Apply Filters"
+						children="Apply Filters"
 						onClick={() => setFilterParams()}
 					/>
 				</div>

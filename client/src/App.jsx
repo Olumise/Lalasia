@@ -13,6 +13,7 @@ import Products from "./components/pages/Products";
 import ComponentPreview from "./components/ui/ComponentPreview";
 import ProductDetails from "./components/pages/ProductDetails";
 import Cart from "./components/pages/Cart";
+import Checkout from "./components/pages/Checkout";
 
 const router = createBrowserRouter([
 	{
@@ -32,6 +33,8 @@ const router = createBrowserRouter([
 			{ path: "product/:product", element: <ProductDetails/> },
 			{ path: "component-preview", element: <ComponentPreview /> },
 			{ path: "cart", element: <Cart /> },
+			{ path: "checkout", element: <Checkout /> },
+
 
 
 		],

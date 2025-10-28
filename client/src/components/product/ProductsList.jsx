@@ -52,7 +52,7 @@ const ProductsList = ({ productsList }) => {
 							/>
 						</div>
 
-						<Button Children="Search" />
+						<Button children="Search" />
 					</form>
 
 					<Popover>
@@ -60,7 +60,7 @@ const ProductsList = ({ productsList }) => {
               <div className="relative">
                 {searchParams.size ? <div className=" absolute -top-2 -right-2 w-6 h-6 bg-black rounded-full flex items-center justify-center text-white text-xs">{searchParams.size}</div> : null}
               <Button
-								Children="Filter"
+								children="Filter"
 								Variant="white"
 								Icon={FilterIcon}
 							/>
